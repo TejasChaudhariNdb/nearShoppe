@@ -5,12 +5,33 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
     <body>
+
+        <nav>
+            <div class="nav-wrapper  blue darken-3">
+              <a href="#!" class="brand-logo">NearShoppe</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+          </nav>
+        
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Tejas/a></li>
+            <li><a href="sass.html">Tejas/a></li>
+            <li><a href="sass.html">Tejas/a></li>
+            <li><a href="sass.html">Tejas/a></li>
+             </ul>
+
+
+             <script>
+ $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+                 </script>
 
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
