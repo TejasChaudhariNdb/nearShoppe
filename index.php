@@ -1,31 +1,9 @@
-
   <html>
-    <head>
-      <!--Import Google Icon Font-->
-  
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Near Shopee</title>
-    </head>
+<?php include("components/head.php"); ?>
 
     <body>
 
-        <nav>
-            <div class="nav-wrapper  blue darken-3">
-              <a href="#!" class="brand-logo">NearShoppe</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            </div>
-          </nav>
-        
-
-          <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Tejas</a></li>
-            <li><a href="#">He Side BAr Aaahe</a></li>
-             </ul>
+   <?php include("components/navbar.php")?>
 
              
 
@@ -98,11 +76,14 @@ nav a.sidenav-trigger {
 <br>
 <div class="container">
 <div class="card">
-<div class="input_container container">
-    <input placeholder="Search Products"  class="input"/>
+<form action="search.php" method="get">
+    <div class="input_container container">
+
+    <input placeholder="Search Products"  class="input" name="query"/>
 
 <span class="search_box search_icon green  waves-effect waves-light"><i class="material-icons ">search</i></span>
 </div>
+</form>
 </div>
 
 <!-- Category Goes Here -->
