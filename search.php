@@ -50,6 +50,7 @@ echo "<div class='container'><div class='card red'><p class='no white-text '>No 
 
 while($row = mysqli_fetch_assoc($result)){
 
+    $shop_id = $row['shop_id'];
     $shop_name = $row['shop_name'];
     $shop_address = $row['shop_address'];
     $shop_city = $row['city'];
@@ -58,7 +59,9 @@ while($row = mysqli_fetch_assoc($result)){
 ?>
 
     <div class="col s12 m6">
-      <div class="card z-depth-2 ">
+    <a href="product.php?shop_id=<?php echo $shop_id?>">
+
+    <div class="card z-depth-2 ">
         <div class="card-content white-text">
           <span class="card-title"><?php echo $shop_name ?></span>
      
@@ -73,13 +76,16 @@ while($row = mysqli_fetch_assoc($result)){
          
         </div>
       </div>
-    </div>
+      </a>
 
+    </div>
 
 
 <?php
 
 }
+
+
 }
 ?>
   </div>
