@@ -4,7 +4,7 @@ include("include/connect.php");
 
 $shop_id = $_GET['shop_id'];
 
-
+// teas
 
 $shop_sql = "select * from shops where shop_id = ".$shop_id;
 
