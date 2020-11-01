@@ -16,6 +16,11 @@ $search_count = mysqli_num_rows($result);
 ?>
 
 <style>
+
+a{
+    color:white !important;
+}
+
 .card{
     background-color:#fb8c00;
 }
@@ -59,15 +64,17 @@ while($row = mysqli_fetch_assoc($result)){
 ?>
 
     <div class="col s12 m6">
-    <a href="product.php?shop_id=<?php echo $shop_id?>">
 
     <div class="card z-depth-2 ">
+    <a href="product.php?shop_id=<?php echo $shop_id?>">
+
         <div class="card-content white-text">
           <span class="card-title"><?php echo $shop_name ?></span>
      
 <p><i class="material-icons">home</i>   <?php echo $shop_address ?> <i class="material-icons right">map</i> </p>
 <p><i class="material-icons">business</i>  <?php echo $shop_city ?></p>
 
+</a>
 
         </div>
         <div class="card-action">
@@ -76,8 +83,7 @@ while($row = mysqli_fetch_assoc($result)){
          
         </div>
       </div>
-      </a>
-
+  
     </div>
 
 

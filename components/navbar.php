@@ -8,7 +8,13 @@
         
 
           <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Tejas</a></li>
-            <li><a href="#">He Side BAr Aaahe</a></li>
+           <br>
+           
+            <li><span class="divider"></span></li>
+            <!-- <li><a href="#">Account</a></li> -->
+            <li><a href="shop_dash/">Add Your Shop</a></li>
+            <li><a href="#">Advertising with us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="logout.php" class="btn red">Logout</a></li>
              </ul>
 

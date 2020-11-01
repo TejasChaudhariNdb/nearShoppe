@@ -20,6 +20,7 @@ while($row = mysqli_fetch_assoc($result)){
     $shop_address = $row['shop_address'];
     $shop_city = $row['city'];
     $shop_rate = $row['rate'];
+    $shop_image = $row['image_link'];
 
 }
 
@@ -102,16 +103,22 @@ height:40%;
       padding-right:20px;
       font-size:25px;
   }
+
+  .madhe{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+  }
+  a{
+      color:black;
+  }
     </style>
 
 <div class="container">
 
-<div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-789754,resizemode-1,msid-73320353/small-biz/sme-sector/the-kirana-is-a-technology-shop-too/kirana-bccl.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="https://images.newindianexpress.com/uploads/user/imagelibrary/2020/3/25/w1200X800/Lockdown_marginallyz.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="https://images.moneycontrol.com/static-mcnews/2020/10/Baba-Ka-Dhaba-Zomato-770x433.jpg?impolicy=website&width=770&height=431"></a>
-    <a class="carousel-item" href="#four!"><img src="https://images.livemint.com/img/2020/05/01/600x338/PTI13-04-2020_000051B_1588354728439_1588354749822.jpg"></a>
-  </div>
+<div class="madhe">
+<img class="materialboxed responsive-img" src="shop_dash/uploads/<?php echo $shop_image; ?>">
+ </div>
 
   <div class="shop_details">
 
@@ -120,17 +127,25 @@ height:40%;
 
 <div class="contact">
 <div>
+<a href="tel:+919158110065">
 <i class="material-icons">phone</i>
+</a>
 </div>
 <div>
+<a href="https://wa.me/919158110065">
 <i class="material-icons">share</i>
+</a>
 </div>
 <div>
+<a href="https://bit.ly/322o9Nr">
 <i class="material-icons">map</i>
+</a>
 </div>
 
 <div>
+<a href="https://wa.me/919158110065">
 <img class="whatsapp " src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/766px-WhatsApp.svg.png" alt="whatsapp "/>
+</a>
 </div>
 </div>
 <p class="address"><?php echo $shop_address ?></p>   
@@ -175,7 +190,7 @@ for($i=0;$i<$shop_rate;$i++){
 
 
   $(document).ready(function(){
-    $('.carousel').carousel();
+    $('.materialboxed').materialbox();
   });
                  </script>
 

@@ -1,208 +1,138 @@
-  <html>
-<?php include("components/head.php"); ?>
 
-    <body>
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    
+    <title>Login</title>        
+    <style>
+        .tabs .indicator{
+            background-color: #0d47a1;
+        }
+        body{
+            align-items: center;
+            
+        }
 
-   <?php include("components/navbar.php")?>
-
-             
-
-<!--   Search Card Goes HEre -->
-
-<style>
-
-.card{
-padding: 2px;
-
-}
-.container{
-padding: 2px;
-}
-.input{
-width: 85% !important;
-}
-
-.search_button{
-    background-color: #1565c0 ;
- }
-
- .search_container{
-    display: flex;
-    justify-content: center;
- }
-
-
- .search_icon{
-    position: absolute;
-    top: 33%;
-    right: 2%;
-
- }
-
- .mic_icon{
-    position: absolute;
-    top: 33%;
- }
- 
-.search_box{
-    padding: 10px;
-    border-radius: 20%;
-    color: white;
-    top: 16%;
-}
-
-body{
-    background-color: #fafafa ;
-}
-
-.col{
-    padding: 11px !important;
-}
-
-@media only screen and (min-width: 993px){
-nav a.sidenav-trigger {
- 
-    display:block;
-}
-
-}
-
-.brand-logo{
-    left: 40%;
-}
-    </style>
+        .well{
+            wordwrap:1px;
+        }
+      </style>
+  </head>    
+    <body>      
+                     
 
 
 <br>
-<div class="container">
-<div class="card">
-<form action="search.php" method="get">
-    <div class="input_container container">
-
-    <input placeholder="Search Products"  class="input" name="query"/>
-
-<span class="search_box search_icon green  waves-effect waves-light"><i class="material-icons ">search</i></span>
-</div>
-</form>
-</div>
-
-<!-- Category Goes Here -->
 <br>
-<div class="card">
-<div class="row">
-
-    <div class="col">
-<i class="material-icons">shopping_cart</i>
+<div class="container center"><h3 class="well">Welcome</h3></div>
 <br>
-Shop
+
+            <div class="row container padtop80" style="min-height:100vh">
+         
+            <div class="col m6 offset-m3 s12">
+                <div class="row">
+                     <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#test1" class="active blue-text text-darken-4">Login</a></li>
+        <li class="tab col s3"><a href="#test2" class="blue-text text-darken-4">Register</a></li>        
+      </ul>
     </div>
-
-    <div class="col">
-<i class="material-icons">cake</i>
-<br>
-Cake
-    </div>
-
-    <div class="col">
-<i class="material-icons">business</i>
-<br>
-office
-    </div>
-
-    <div class="col">
-<i class="material-icons">build</i>
-<br>
-Build
-    </div>
-
-    <div class="col">
-<i class="material-icons">directions_bike</i>
-<br>
-Bike
-    </div>
-
-    <div class="col">
-<i class="material-icons">drive_eta</i>
-<br>
-Car
-    </div>
-
-
-
-
-    <div class="col">
-        <i class="material-icons">shopping_cart</i>
-        <br>
-        Shop
+                </div>
             </div>
-        
-            <div class="col">
-        <i class="material-icons">cake</i>
-        <br>
-        Cake
+   
+                <div id="test1" class="col s12 padtop40">                    
+                    <div class="col m6 offset-m3 s12 z-depth-1 padtop10 " >
+                        <div class="lid">
+       
+       
+       <form action="login_code.php" method="post">
+
+                <div class="input-field col s12 remx">
+                  <input name="lphone" placeholder="phone" id="first_name" type="number" class="validate">
+                  <label for="first_name">Phone No</label>
+                </div>
+                <div class="input-field col s12 remx">
+                  <input name="lpassword" placeholder="Placeholder" id="password1" type="password" class="validate">
+                  <label for="password1">Password</label>
+                </div>
+            
+
+                <p class="padleft10 remx" >
+                    <button type="submit" href="#" class="blue darken-4 btn">Login</buttton>
+                             </p>
+                        </div>
+                       </form>
             </div>
-        
-            <div class="col">
-        <i class="material-icons">business</i>
-        <br>
-        Office
+                    
+                </div>
+
+
+<form action="sign_code.php" method="post">
+
+    <div id="test2" class="col s12 padtop40">
+                <div class="col m6 offset-m3 s12 z-depth-1 padtop10">
+
+                <div class="input-field col s12 ">
+                  <input name="sname" placeholder="Name" id="first_name" type="text" class="validate">
+                  <label for="first_name"> Name* </label>
+                </div>          
+                <div class="input-field col s12 ">
+                  <input name="smobile" type="number" placeholder="Phone Number" id="first_name" type="text" class="validate">
+                  <label for="first_name">Mobile* </label>
+                </div>      
+                <div class="input-field col s12 ">
+                  <input name="spassword" placeholder="password" id="password1" type="password" class="validate">
+                  <label for="password1">Password*</label>
+                </div>
+                
+                 
+                <p class="padleft10 center">
+                    <button href="#" class="pink darken-1 btn" type="submit">Register</button>                    
+                </p>
+            <br>
+
             </div>
+                
+                </div>    
+  
+  </form>
+  </div>      
         
-            <div class="col">
-        <i class="material-icons">build</i>
-        <br>
-        Build
-            </div>
         
-            <div class="col">
-        <i class="material-icons">directions_bike</i>
-        <br>
-        Bike
-            </div>
+         
+      
         
-            <div class="col">
-        <i class="material-icons">drive_eta</i>
-        <br>
-        Car
-            </div>
-        
-            <div class="col">
-                <i class="material-icons">cake</i>
-                <br>
-                Cake
-                    </div>
-
-                    <div class="col">
-                        <i class="material-icons">cake</i>
-                        <br>
-                        Cake
-                            </div>
-
-                            <div class="col">
-                                <i class="material-icons">directions_bike</i>
-                                <br>
-                                Bike
-                                    </div>          
-
-                                  
-    </div>
-
-
-
-</div>
-             <script>
- 
- $('.sidenav').show();
-
- 
- $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-                 </script>
-
-
-    <!-- Aaaj Tevv -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
+        </script>
+        <script>
+    	   $( document ).ready(function(){
+    	       $(".button-collapse").sideNav();
+               $(".dropdown-button").dropdown();
+    	       $('select').material_select(); 
+               $('.slider').slider({full_width: true});
+                   $(".button-collapse").sideNav();
+           })
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".hid").hide();
+                $("#hider").click(function(){
+                    $(".remx").hide();
+                    $(".hid").show();
+                }); 
+                $("#cancll").click(function(){
+                    $(".remx").show();
+                    $(".hid").hide();
+                })
+            });
+        </script>
     </body>
-  </html>
-        
+
+</body>
+</html>
