@@ -19,6 +19,7 @@ $result = mysqli_query($con, $shop_sql);
 
 
 
+
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
  
@@ -27,6 +28,7 @@ if (mysqli_num_rows($result) > 0) {
  
     while($row = mysqli_fetch_assoc($result)) {
   
+      $shop_id = $row['shop_id'];
       $shop_name = $row['shop_name'];
       $shop_address = $row['shop_address'];
       $city = $row['city'];
@@ -34,14 +36,24 @@ if (mysqli_num_rows($result) > 0) {
       $shop_image = $row['image_link'];
     }
   
+
+    $tag_line = "Best Deals Are Here";
+    $modify ="";
   
   } else {
       
     $shop_show = "";
    
     $delete_show = "hide";
- 
+    $shop_id = 0; 
+    $tag_line = "List Your Shop :)";
+    $modify ="disabled";
   }
+
+
+  $best_sql = "SELECT * FROM best_deal where shop_id = '$shop_id'";
+  $result2 = mysqli_query($con, $best_sql);
+  
 
 ?>
 
@@ -95,7 +107,7 @@ img{
       <div class="card-panel black">
         <a class="waves-effect waves-light btn pink modal-trigger <?php echo $shop_show;?>" href="#modal1">Add Shop</a>
         <a class="waves-effect waves-light btn red <?php echo $delete_show;?>" href="delete.php">Delete Shop</a>
-        <a class="waves-effect waves-light btn right  amber darken-1 modal-trigger"  href="#modal2">Modify Shop</a>
+        <a class="waves-effect waves-light btn right  amber darken-1 modal-trigger <?php echo $modify;?>"  href="#modal2">Modify Shop</a>
         
          </div>
     </div>
@@ -157,6 +169,37 @@ img{
 <!-- End -->
 
 
+<!-- Best Deal -->
+
+<h4 class="center"><?php echo $tag_line ?></h4>
+
+<div class="container">
+<div class="row">
+
+<?php 
+            while($row = mysqli_fetch_assoc($result2)){
+
+                ?>
+
+                <div class="col s6">
+                    <div class="card black white-text">
+
+                        <div class="card-content white-text">
+                            <span class="card-title"><?php echo $row['user_phone']?></span>
+                      
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <?php  } ?>
+
+            </div>
+            </div>
+
+<!-- Best Deal -->
+
 
 <!-- Modal -->
 
@@ -191,9 +234,15 @@ img{
        
     <select name="cat">
       <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="cake">Cake</option>
+      <option value="hotel">hotel</option>
+      <option value="Automobile">Automobile</option>
+      <option value="Mobile">Mobile Shop</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Fitness">Fitness</option>
+      <option value="shop">Shop</option>
+      <option value="Repair">Repair</option>
+      <option value="Decor">Home Decor</option>
     </select>
     <label>Category</label>
 
