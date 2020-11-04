@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
 <?php
 session_start();
 include("include/connect.php");
@@ -18,18 +20,18 @@ if($num_rows === 0){
     $query = mysqli_query($con,"INSERT INTO users (name,phone_number,password) values('$name','$phone','$password')");
 
     if($query){
-        echo "insert";
+     
     
         $_SESSION['phone'] = $phone;
         header("location:home.php");
     
     }else{
-        echo "Error aaahe Bhoooo";
+        $message =  "Error Try Again :)";
     }
     
 
 }else{
-    echo "number already";
+    $message =  "Number Already Register";
 }
 
 
@@ -40,3 +42,17 @@ if($num_rows === 0){
 
 
 ?>
+
+
+
+<div class="row">
+    <div class="col s12">
+      <div class="card-panel red">
+        <span class="white-text center">
+   <h3>    <?php echo $message;?> </h3>
+        </span>
+
+      </div>
+      <a href="index.php" class="btn-large green ">Login</a>
+    </div>
+  </div>

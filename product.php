@@ -166,20 +166,20 @@ while($row = mysqli_fetch_assoc($result)){
             <br>
             <br>
 
-            <p class="city">Rate This</p>
+            <!-- <p class="city">Rate This</p>
             <div class="rating">
 
                 <?php
-
+/*
 for($i=0;$i<$shop_rate;$i++){
 
     echo '<i class="material-icons check">star</i>';
 }
-
+*/
 ?>
 
             </div>
-
+1 -->
 <br>
 
 <form class="col s12" action="comment.php" method="post">
@@ -255,6 +255,7 @@ for($i=0;$i<$shop_rate;$i++){
 
 
     <script>
+    
     $('.sidenav').show();
 
     $(document).ready(function(){
@@ -268,6 +269,7 @@ for($i=0;$i<$shop_rate;$i++){
     $(document).ready(function() {
         $('.materialboxed').materialbox();
     });
+
     </script>
 
 

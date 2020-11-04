@@ -69,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
 
 <body>
 
-    <?php include("../components/navbar.php")?>
+    <?php include("navbar.php")?>
 
 
 
@@ -329,6 +329,8 @@ img{
 
 
 <!-- Modify Shop End -->
+
+
 
 
         <script>

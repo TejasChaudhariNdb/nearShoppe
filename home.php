@@ -26,7 +26,6 @@ if(!$_SESSION['phone']){
     <?php include("components/navbar.php")?>
 
 
-
     <!--   Search Card Goes HEre -->
 
     <style>
@@ -96,7 +95,34 @@ if(!$_SESSION['phone']){
         color: black;
     }
     </style>
-
+<br>
+<div class="container">
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/Flights.jpg"> <!-- random image -->
+        <div class="caption center-align">
+        </div>
+      </li>
+      <li>
+        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/b2b_website_banner_m.jpg"> <!-- random image -->
+        <div class="caption left-align">
+        </div>
+      </li>
+      <li>
+        <img src="https://n2.sdlcdn.com/imgs/j/l/m/dermacol-03fd2.jpg"> <!-- random image -->
+        <div class="caption right-align">
+        </div>
+      </li>
+      <li>
+        <img src="https://n3.sdlcdn.com/imgs/j/f/z/MS_9lives_WebPlat_18_6_20-0322f.jpg"> <!-- random image -->
+        <div class="caption center-align">
+        </div>
+      </li>
+    </ul>
+  </div>
+      
+</div>
 
     <br>
     <div class="container">
@@ -126,15 +152,83 @@ if(!$_SESSION['phone']){
 
                 </a>
 
-                <div class="col s2">
-                    <i class="material-icons">directions_bike</i>                    <br>
-                    Bike                </div>
+                <a href="search.php?query=cake">
+                    <div class="col s2">
+                        <i class="material-icons">cake</i>
+                        <br>
+                        Cake
+                    </div>
 
+                </a>
+
+                <a href="search.php?query=hotel">
+                    <div class="col s2">
+                        <i class="material-icons">hotel</i>
+                        <br>
+                        Hotel
+                    </div>
+
+                </a>
+
+                <a href="search.php?query=fitness">
+                    <div class="col s2">
+                        <i class="material-icons">fitness_center</i>
+                        <br>
+                        Fitness Center
+                    </div>
+
+                </a>
+                <a href="search.php?query=doctor">
+                    <div class="col s2">
+                        <i class="material-icons">local_hospital</i>
+                        <br>
+                        Fitness Center
+                    </div>
+
+                </a>
+               
+                <a href="search.php?query=home">
+                    <div class="col s2">
+                        <i class="material-icons">home</i>
+                        <br>
+                        home Decor
+                    </div>
+
+                </a>
+                <a href="search.php?query=automobile">
+                    <div class="col s2">
+                        <i class="material-icons">directions_bike</i>
+                        <br>
+                     Automobile
+                    </div>
+
+                </a>
+
+               
 
             </div>
 
         </div>
-        <script>        $('.sidenav').show();
+        </div>
+
+<br>
+<br>
+<br>
+<hr>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+        <?php include("components/footer.php")?>
+        <script>
+         $(document).ready(function(){
+    $('.slider').slider();
+  });
+        
+        $('.sidenav').show();
 
         $(document).ready(function() {            $('.sidenav').sidenav();
         });        </script>

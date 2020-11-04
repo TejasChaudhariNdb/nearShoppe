@@ -1,4 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['phone'])){
 
+  header("location:home.php");
+
+}
+
+?>
 <html>
   <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,7 +37,7 @@
 
 <br>
 <br>
-<div class="container center"><h3 class="well">Welcome</h3></div>
+<div class="container center"><h3 class="well">Welcome to NearShop</h3></div>
 <br>
 
             <div class="row container padtop80" style="min-height:100vh">
